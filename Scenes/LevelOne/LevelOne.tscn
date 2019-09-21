@@ -256,6 +256,7 @@ texture_normal = ExtResource( 17 )
 texture_hover = ExtResource( 18 )
 
 [node name="Instructions" type="CanvasLayer" parent="."]
+editor/display_folded = true
 layer = 2
 
 [node name="InstructionsInterface" type="Control" parent="Instructions"]

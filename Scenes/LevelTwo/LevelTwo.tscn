@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=2]
 
-[ext_resource path="res://Scenes/LevelOne/Scripts/LevelOne.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/LevelTwo/Scripts/LevelTwo.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Backgroundpronto.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Table.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Buttons/MergeButton1.png" type="Texture" id=4]
@@ -119,7 +119,7 @@ tracks/1/keys = {
 size = 35
 font_data = ExtResource( 15 )
 
-[node name="Level 1" type="Node"]
+[node name="Level 2" type="Node"]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ],
