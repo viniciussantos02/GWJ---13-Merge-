@@ -1,26 +1,32 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Scenes/LevelTwo/Scripts/LevelTwo.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Backgroundpronto.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Table.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Buttons/MergeButton1.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Buttons/ButtonMerge2.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/LevelOne/Scripts/elementOne.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/LevelTwo/Scripts/elementOne.gd" type="Script" id=6]
 [ext_resource path="res://Sprites/Elements/H2.png" type="Texture" id=7]
-[ext_resource path="res://Scenes/LevelOne/Scripts/elementTwo.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/LevelTwo/Scripts/elementTwo.gd" type="Script" id=8]
 [ext_resource path="res://Sprites/Elements/O.png" type="Texture" id=9]
-[ext_resource path="res://Scenes/LevelOne/Scripts/elementThree.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/LevelTwo/Scripts/elementThree.gd" type="Script" id=10]
 [ext_resource path="res://Sprites/Elements/C2.png" type="Texture" id=11]
-[ext_resource path="res://Scenes/LevelOne/RecipientOne.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/LevelOne/RecipientTwo.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Sprites/Shelf.png" type="Texture" id=14]
-[ext_resource path="res://Fonts/ice_pixel-7.ttf" type="DynamicFontData" id=15]
-[ext_resource path="res://Interfaces/PauseLayer.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Sprites/Book.PNG" type="Texture" id=17]
-[ext_resource path="res://Sprites/Book2.PNG" type="Texture" id=18]
-[ext_resource path="res://Sprites/Buttons/OKButton1.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/Buttons/OKButton2.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/DropOfWater.png" type="Texture" id=21]
+[ext_resource path="res://Scenes/LevelTwo/Scripts/elementFour.gd" type="Script" id=12]
+[ext_resource path="res://Sprites/Elements/O2.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/LevelTwo/Scripts/elementFive.gd" type="Script" id=14]
+[ext_resource path="res://Sprites/Elements/C.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/LevelOne/RecipientOne.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/LevelTwo/Scripts/RecipientOne.gd" type="Script" id=17]
+[ext_resource path="res://Scenes/LevelOne/RecipientTwo.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/LevelTwo/Scripts/RecipientTwo.gd" type="Script" id=19]
+[ext_resource path="res://Sprites/Shelf.png" type="Texture" id=20]
+[ext_resource path="res://Fonts/ice_pixel-7.ttf" type="DynamicFontData" id=21]
+[ext_resource path="res://Interfaces/PauseLayer.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Sprites/Book.PNG" type="Texture" id=23]
+[ext_resource path="res://Sprites/Book2.PNG" type="Texture" id=24]
+[ext_resource path="res://Sprites/Buttons/OKButton1.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Buttons/OKButton2.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/dirty.png" type="Texture" id=27]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 501.306, 31.2538 )
@@ -33,7 +39,7 @@ extents = Vector2( 160, 9.80901 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 50
-font_data = ExtResource( 15 )
+font_data = ExtResource( 21 )
 
 [sub_resource type="Animation" id=5]
 resource_name = "Merge"
@@ -116,8 +122,8 @@ tracks/1/keys = {
 }
 
 [sub_resource type="DynamicFont" id=7]
-size = 35
-font_data = ExtResource( 15 )
+size = 40
+font_data = ExtResource( 21 )
 
 [node name="Level 2" type="Node"]
 script = ExtResource( 1 )
@@ -158,7 +164,7 @@ editor/display_folded = true
 
 [node name="elementOne" type="RigidBody2D" parent="Elements"]
 editor/display_folded = true
-position = Vector2( 100, 140.071 )
+position = Vector2( 157.934, 131 )
 z_index = 20
 script = ExtResource( 6 )
 __meta__ = {
@@ -173,7 +179,7 @@ polygon = PoolVector2Array( -27.915, -31.2878, 28.395, -31.2878, 31.2722, -27.12
 
 [node name="elementTwo" type="RigidBody2D" parent="Elements"]
 editor/display_folded = true
-position = Vector2( 300, 139.608 )
+position = Vector2( 281, 197.608 )
 z_index = 20
 script = ExtResource( 8 )
 __meta__ = {
@@ -188,7 +194,7 @@ polygon = PoolVector2Array( -25.6038, -31.1022, 24.8811, -31.3796, 31.5384, -27.
 
 [node name="elementThree" type="RigidBody2D" parent="Elements"]
 editor/display_folded = true
-position = Vector2( 200, 140.071 )
+position = Vector2( 199, 198.071 )
 z_index = 20
 script = ExtResource( 10 )
 __meta__ = {
@@ -201,11 +207,43 @@ texture = ExtResource( 11 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Elements/elementThree"]
 polygon = PoolVector2Array( -26.5437, -31.4306, 26.715, -31.708, 31.4306, -26.9924, 31.4306, 27.0985, 26.715, 31.2594, -26.8211, 31.2594, -31.2594, 27.0985, -31.2594, -26.9924 )
 
-[node name="RecipientOne" parent="." instance=ExtResource( 12 )]
-position = Vector2( 370, 484 )
+[node name="elementFour" type="RigidBody2D" parent="Elements"]
+editor/display_folded = true
+position = Vector2( 115.765, 197.608 )
+z_index = 20
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="RecipientTwo" parent="." instance=ExtResource( 13 )]
+[node name="Sprite" type="Sprite" parent="Elements/elementFour"]
+texture = ExtResource( 13 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Elements/elementFour"]
+polygon = PoolVector2Array( -27.1602, -30.8167, 26.6857, -30.8167, 30.1822, -27.495, 30.7067, 26.8755, 26.8605, 31.4209, -26.2861, 31.4209, -31.0064, 27.5747, -30.6567, -26.4461 )
+
+[node name="elementFive" type="RigidBody2D" parent="Elements"]
+editor/display_folded = true
+position = Vector2( 238.762, 131.524 )
+z_index = 20
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Elements/elementFive"]
+texture = ExtResource( 15 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Elements/elementFive"]
+polygon = PoolVector2Array( -27.254, -31.2805, 26.5596, -31.2805, 30.7204, -26.8423, 30.7204, 26.9713, 26.0048, 31.1321, -25.0349, 31.1321, -30.5827, 26.9713, -30.5827, -26.5649 )
+
+[node name="RecipientOne" parent="." instance=ExtResource( 16 )]
+position = Vector2( 370, 484 )
+script = ExtResource( 17 )
+
+[node name="RecipientTwo" parent="." instance=ExtResource( 18 )]
 position = Vector2( 940, 483 )
+script = ExtResource( 19 )
 
 [node name="Pointer" type="Area2D" parent="."]
 editor/display_folded = true
@@ -218,8 +256,8 @@ shape = SubResource( 2 )
 
 [node name="Shelf" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 200, 189.809 )
-texture = ExtResource( 14 )
+position = Vector2( 200, 242.809 )
+texture = ExtResource( 20 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -232,9 +270,9 @@ shape = SubResource( 3 )
 [node name="NoElements" type="Label" parent="."]
 visible = false
 margin_left = 140.0
-margin_top = 230.0
+margin_top = 275.0
 margin_right = 765.0
-margin_bottom = 315.0
+margin_bottom = 360.0
 custom_fonts/font = SubResource( 4 )
 text = "No element in the recipient"
 align = 1
@@ -245,17 +283,18 @@ uppercase = true
 anims/Merge = SubResource( 5 )
 anims/NoElementsAnime = SubResource( 6 )
 
-[node name="PauseLayer" parent="." instance=ExtResource( 16 )]
+[node name="PauseLayer" parent="." instance=ExtResource( 22 )]
 
 [node name="BookButton" type="TextureButton" parent="."]
 margin_left = 68.0
 margin_top = 380.0
 margin_right = 132.0
 margin_bottom = 444.0
-texture_normal = ExtResource( 17 )
-texture_hover = ExtResource( 18 )
+texture_normal = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
 
 [node name="Instructions" type="CanvasLayer" parent="."]
+editor/display_folded = true
 layer = 2
 
 [node name="InstructionsInterface" type="Control" parent="Instructions"]
@@ -280,30 +319,30 @@ margin_left = 760.0
 margin_top = 464.0
 margin_right = 1010.0
 margin_bottom = 534.0
-texture_normal = ExtResource( 19 )
-texture_hover = ExtResource( 20 )
+texture_normal = ExtResource( 25 )
+texture_hover = ExtResource( 26 )
 
 [node name="InstructionMessage" type="Label" parent="Instructions/InstructionsInterface"]
-margin_left = 243.0
-margin_top = 220.0
-margin_right = 1027.0
-margin_bottom = 350.0
+margin_left = 233.956
+margin_top = 213.971
+margin_right = 1017.96
+margin_bottom = 343.971
 custom_fonts/font = SubResource( 7 )
-text = "Hello there, OK, let's get this done!!
-Your first mission is to discover the water composion!!"
+text = "OK, your second mission is to discover
+ the Carbon dioxide composion!"
 align = 1
 valign = 1
 uppercase = true
 
-[node name="WaterDrop" type="Sprite" parent="Instructions/InstructionsInterface"]
-position = Vector2( 370, 440 )
-scale = Vector2( 0.24, 0.24 )
-texture = ExtResource( 21 )
+[node name="Dirty" type="Sprite" parent="Instructions/InstructionsInterface"]
+position = Vector2( 387.453, 447.933 )
+scale = Vector2( 0.718976, 0.718976 )
+texture = ExtResource( 27 )
 [connection signal="pressed" from="MergeButton" to="." method="_on_MergeButton_pressed"]
 [connection signal="haveElement" from="RecipientOne" to="." method="_on_RecipientOne_haveElement"]
 [connection signal="haveNoElement" from="RecipientOne" to="." method="_on_RecipientOne_haveNoElement"]
 [connection signal="haveElement" from="RecipientTwo" to="." method="_on_RecipientTwo_haveElement"]
 [connection signal="haveNoElement" from="RecipientTwo" to="." method="_on_RecipientTwo_haveNoElement"]
 [connection signal="animation_finished" from="Anime" to="." method="_on_Anime_animation_finished"]
-[connection signal="pressed" from="BookButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="BookButton" to="." method="_on_BookButton_pressed"]
 [connection signal="pressed" from="Instructions/InstructionsInterface/OKButton" to="." method="_on_OKButton_pressed"]

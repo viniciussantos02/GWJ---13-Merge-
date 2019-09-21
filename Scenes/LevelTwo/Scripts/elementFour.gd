@@ -4,8 +4,8 @@ var dragging : bool = false
 var translate_by = null
 
 func _ready():
-	add_to_group(game.C2)
-	
+	add_to_group(game.RIGHTLVTWO)
+
 func _integrate_forces(state):
 	if dragging:
 		state.set_linear_velocity(Vector2(0, 0))
