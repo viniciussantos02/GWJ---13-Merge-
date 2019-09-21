@@ -1,0 +1,194 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Interfaces/Scripts/PauseMenu.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Buttons/ResumeButton1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Buttons/ResumeButton2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Buttons/MenuButton1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Buttons/MenuButton2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Buttons/RestartButton1.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Buttons/RestartButton2.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Buttons/QuitButton1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Buttons/QuitButton2.png" type="Texture" id=9]
+[ext_resource path="res://Fonts/ice_pixel-7.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Sprites/Buttons/YesButton1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Buttons/YesButton2.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Buttons/Nobutton1.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Buttons/NoButton2.png" type="Texture" id=14]
+
+[sub_resource type="DynamicFont" id=2]
+size = 85
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 10 )
+
+[node name="PauseLayer" type="CanvasLayer"]
+layer = 2
+
+[node name="PauseMenu" type="Control" parent="."]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="BlackOverlay" type="ColorRect" parent="PauseMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.831373 )
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu"]
+margin_left = 214.0
+margin_top = 60.0
+margin_right = 1040.0
+margin_bottom = 657.0
+color = Color( 0.321569, 0.317647, 0.317647, 1 )
+
+[node name="ResumeButton" type="TextureButton" parent="PauseMenu"]
+margin_left = 490.0
+margin_top = 250.0
+margin_right = 740.0
+margin_bottom = 320.0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="MenuButton" type="TextureButton" parent="PauseMenu"]
+margin_left = 490.0
+margin_top = 348.0
+margin_right = 740.0
+margin_bottom = 418.0
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+
+[node name="RestartButton" type="TextureButton" parent="PauseMenu"]
+margin_left = 490.0
+margin_top = 442.0
+margin_right = 740.0
+margin_bottom = 512.0
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
+
+[node name="QuitButton" type="TextureButton" parent="PauseMenu"]
+margin_left = 490.0
+margin_top = 534.0
+margin_right = 740.0
+margin_bottom = 604.0
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="PauseMenu"]
+margin_left = 440.0
+margin_top = 90.0
+margin_right = 793.0
+margin_bottom = 210.0
+custom_fonts/font = SubResource( 2 )
+text = "Pause Menu"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="ConfirmRestartInterface" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="ConfirmRestMenu" type="Control" parent="ConfirmRestartInterface"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="ConfirmRestartInterface/ConfirmRestMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.992157 )
+
+[node name="ColorRect2" type="ColorRect" parent="ConfirmRestartInterface/ConfirmRestMenu"]
+margin_left = 330.0
+margin_top = 170.0
+margin_right = 958.0
+margin_bottom = 520.0
+color = Color( 0.321569, 0.317647, 0.317647, 1 )
+
+[node name="YesButton" type="TextureButton" parent="ConfirmRestartInterface/ConfirmRestMenu"]
+margin_left = 370.0
+margin_top = 400.0
+margin_right = 620.0
+margin_bottom = 470.0
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+
+[node name="NoButton" type="TextureButton" parent="ConfirmRestartInterface/ConfirmRestMenu"]
+margin_left = 670.0
+margin_top = 400.0
+margin_right = 920.0
+margin_bottom = 470.0
+texture_normal = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+
+[node name="Label2" type="Label" parent="ConfirmRestartInterface/ConfirmRestMenu"]
+margin_left = 310.0
+margin_top = 190.0
+margin_right = 967.0
+margin_bottom = 310.0
+custom_fonts/font = SubResource( 1 )
+text = "Do you really want to 
+restart the entire game?"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="ConfirmQuitInterface" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="ConfirmQuitMenu" type="Control" parent="ConfirmQuitInterface"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="ConfirmQuitInterface/ConfirmQuitMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.992157 )
+
+[node name="ColorRect2" type="ColorRect" parent="ConfirmQuitInterface/ConfirmQuitMenu"]
+margin_left = 330.0
+margin_top = 170.0
+margin_right = 958.0
+margin_bottom = 520.0
+color = Color( 0.321569, 0.317647, 0.317647, 1 )
+
+[node name="YesButtonQuit" type="TextureButton" parent="ConfirmQuitInterface/ConfirmQuitMenu"]
+margin_left = 370.0
+margin_top = 400.0
+margin_right = 620.0
+margin_bottom = 470.0
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+
+[node name="NoButtonQuit" type="TextureButton" parent="ConfirmQuitInterface/ConfirmQuitMenu"]
+margin_left = 670.0
+margin_top = 400.0
+margin_right = 734.0
+margin_bottom = 464.0
+texture_normal = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+
+[node name="Label3" type="Label" parent="ConfirmQuitInterface/ConfirmQuitMenu"]
+margin_left = 310.0
+margin_top = 190.0
+margin_right = 967.0
+margin_bottom = 310.0
+custom_fonts/font = SubResource( 1 )
+text = "Do you really want to 
+quit the game?"
+align = 1
+valign = 1
+uppercase = true
+[connection signal="pressed" from="PauseMenu/ResumeButton" to="PauseMenu" method="_on_ResumeButton_pressed"]
+[connection signal="pressed" from="PauseMenu/RestartButton" to="PauseMenu" method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="PauseMenu/QuitButton" to="PauseMenu" method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="ConfirmRestartInterface/ConfirmRestMenu/YesButton" to="PauseMenu" method="_on_YesButton_pressed"]
+[connection signal="pressed" from="ConfirmRestartInterface/ConfirmRestMenu/NoButton" to="PauseMenu" method="_on_NoButton_pressed"]
+[connection signal="pressed" from="ConfirmQuitInterface/ConfirmQuitMenu/YesButtonQuit" to="PauseMenu" method="_on_YesButtonQuit_pressed"]
+[connection signal="pressed" from="ConfirmQuitInterface/ConfirmQuitMenu/NoButtonQuit" to="PauseMenu" method="_on_NoButtonQuit_pressed"]
