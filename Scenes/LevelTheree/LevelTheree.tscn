@@ -1,34 +1,37 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=40 format=2]
 
-[ext_resource path="res://Scenes/LevelTwo/Scripts/LevelTwo.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/LevelTheree/Scripts/LevelTheree.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Backgroundpronto.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Table.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Buttons/MergeButton1.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Buttons/ButtonMerge2.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/LevelTwo/Scripts/elementOne.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/LevelTheree/Scripts/elementOne.gd" type="Script" id=6]
 [ext_resource path="res://Sprites/Elements/H2.png" type="Texture" id=7]
-[ext_resource path="res://Scenes/LevelTwo/Scripts/elementTwo.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/LevelTheree/Scripts/elementTwo.gd" type="Script" id=8]
 [ext_resource path="res://Sprites/Elements/O.png" type="Texture" id=9]
-[ext_resource path="res://Scenes/LevelTwo/Scripts/elementThree.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/LevelTheree/Scripts/elementThree.gd" type="Script" id=10]
 [ext_resource path="res://Sprites/Elements/C2.png" type="Texture" id=11]
-[ext_resource path="res://Scenes/LevelTwo/Scripts/elementFour.gd" type="Script" id=12]
+[ext_resource path="res://Scenes/LevelTheree/Scripts/elementFour.gd" type="Script" id=12]
 [ext_resource path="res://Sprites/Elements/O2.png" type="Texture" id=13]
-[ext_resource path="res://Scenes/LevelTwo/Scripts/elementFive.gd" type="Script" id=14]
+[ext_resource path="res://Scenes/LevelTheree/Scripts/elementFive.gd" type="Script" id=14]
 [ext_resource path="res://Sprites/Elements/C.png" type="Texture" id=15]
-[ext_resource path="res://Scenes/LevelOne/RecipientOne.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scenes/LevelTwo/Scripts/RecipientOne.gd" type="Script" id=17]
-[ext_resource path="res://Scenes/LevelOne/RecipientTwo.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Scenes/LevelTwo/Scripts/RecipientTwo.gd" type="Script" id=19]
-[ext_resource path="res://Sprites/Shelf.png" type="Texture" id=20]
-[ext_resource path="res://Fonts/ice_pixel-7.ttf" type="DynamicFontData" id=21]
-[ext_resource path="res://Interfaces/PauseLayer.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Sprites/Book.PNG" type="Texture" id=23]
-[ext_resource path="res://Sprites/Book2.PNG" type="Texture" id=24]
-[ext_resource path="res://Sprites/Buttons/OKButton1.png" type="Texture" id=25]
-[ext_resource path="res://Sprites/Buttons/OKButton2.png" type="Texture" id=26]
-[ext_resource path="res://Sprites/dirty.png" type="Texture" id=27]
-[ext_resource path="res://Sprites/Buttons/GoButton1.png" type="Texture" id=28]
-[ext_resource path="res://Sprites/Buttons/GoButton2.png" type="Texture" id=29]
+[ext_resource path="res://Scenes/LevelTheree/Scripts/elementSix.gd" type="Script" id=16]
+[ext_resource path="res://Sprites/Elements/Fe.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/LevelTheree/Scripts/elementSeven.gd" type="Script" id=18]
+[ext_resource path="res://Sprites/Elements/Fe2.png" type="Texture" id=19]
+[ext_resource path="res://Scenes/LevelTheree/Scripts/elementEight.gd" type="Script" id=20]
+[ext_resource path="res://Sprites/Elements/O3.png" type="Texture" id=21]
+[ext_resource path="res://Scenes/LevelOne/RecipientOne.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/LevelTheree/Scripts/RecipientOne.gd" type="Script" id=23]
+[ext_resource path="res://Scenes/LevelOne/RecipientTwo.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/LevelTheree/Scripts/RecipientTwo.gd" type="Script" id=25]
+[ext_resource path="res://Sprites/Shelf.png" type="Texture" id=26]
+[ext_resource path="res://Fonts/ice_pixel-7.ttf" type="DynamicFontData" id=27]
+[ext_resource path="res://Interfaces/PauseLayer.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Sprites/Book.PNG" type="Texture" id=29]
+[ext_resource path="res://Sprites/Book2.PNG" type="Texture" id=30]
+[ext_resource path="res://Sprites/Buttons/OKButton1.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Buttons/OKButton2.png" type="Texture" id=32]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 501.306, 31.2538 )
@@ -41,7 +44,7 @@ extents = Vector2( 160, 9.80901 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 50
-font_data = ExtResource( 21 )
+font_data = ExtResource( 27 )
 
 [sub_resource type="Animation" id=5]
 resource_name = "Merge"
@@ -125,13 +128,9 @@ tracks/1/keys = {
 
 [sub_resource type="DynamicFont" id=7]
 size = 40
-font_data = ExtResource( 21 )
+font_data = ExtResource( 27 )
 
-[sub_resource type="DynamicFont" id=8]
-size = 30
-font_data = ExtResource( 21 )
-
-[node name="Level 2" type="Node"]
+[node name="Level 3" type="Node"]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ],
@@ -143,7 +142,6 @@ position = Vector2( 640, 360 )
 texture = ExtResource( 2 )
 
 [node name="Table" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 660, 680 )
 __meta__ = {
 "_edit_group_": true
@@ -169,7 +167,7 @@ texture_hover = ExtResource( 5 )
 
 [node name="elementOne" type="RigidBody2D" parent="Elements"]
 editor/display_folded = true
-position = Vector2( 157.934, 131 )
+position = Vector2( 65, 198.769 )
 z_index = 20
 script = ExtResource( 6 )
 __meta__ = {
@@ -184,7 +182,7 @@ polygon = PoolVector2Array( -27.915, -31.2878, 28.395, -31.2878, 31.2722, -27.12
 
 [node name="elementTwo" type="RigidBody2D" parent="Elements"]
 editor/display_folded = true
-position = Vector2( 281, 197.608 )
+position = Vector2( 169.051, 132.32 )
 z_index = 20
 script = ExtResource( 8 )
 __meta__ = {
@@ -199,7 +197,7 @@ polygon = PoolVector2Array( -25.6038, -31.1022, 24.8811, -31.3796, 31.5384, -27.
 
 [node name="elementThree" type="RigidBody2D" parent="Elements"]
 editor/display_folded = true
-position = Vector2( 199, 198.071 )
+position = Vector2( 337, 197.866 )
 z_index = 20
 script = ExtResource( 10 )
 __meta__ = {
@@ -214,7 +212,7 @@ polygon = PoolVector2Array( -26.5437, -31.4306, 26.715, -31.708, 31.4306, -26.99
 
 [node name="elementFour" type="RigidBody2D" parent="Elements"]
 editor/display_folded = true
-position = Vector2( 115.765, 197.608 )
+position = Vector2( 199.557, 198.731 )
 z_index = 20
 script = ExtResource( 12 )
 __meta__ = {
@@ -229,7 +227,7 @@ polygon = PoolVector2Array( -27.1602, -30.8167, 26.6857, -30.8167, 30.1822, -27.
 
 [node name="elementFive" type="RigidBody2D" parent="Elements"]
 editor/display_folded = true
-position = Vector2( 238.762, 131.524 )
+position = Vector2( 132.301, 198.769 )
 z_index = 20
 script = ExtResource( 14 )
 __meta__ = {
@@ -242,13 +240,57 @@ texture = ExtResource( 15 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Elements/elementFive"]
 polygon = PoolVector2Array( -27.254, -31.2805, 26.5596, -31.2805, 30.7204, -26.8423, 30.7204, 26.9713, 26.0048, 31.1321, -25.0349, 31.1321, -30.5827, 26.9713, -30.5827, -26.5649 )
 
-[node name="RecipientOne" parent="." instance=ExtResource( 16 )]
-position = Vector2( 370, 484 )
-script = ExtResource( 17 )
+[node name="elementSix" type="RigidBody2D" parent="Elements"]
+editor/display_folded = true
+position = Vector2( 97.8995, 132.69 )
+z_index = 20
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="RecipientTwo" parent="." instance=ExtResource( 18 )]
+[node name="Sprite" type="Sprite" parent="Elements/elementSix"]
+texture = ExtResource( 17 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Elements/elementSix"]
+polygon = PoolVector2Array( -27.6786, -31.6549, 26.4104, -31.6549, 31.1325, -27.3621, 31.1325, 27.3708, 27.0544, 31.0197, -25.7468, 31.0197, -31.1128, 26.7269, -31.1128, -27.3621 )
+
+[node name="elementSeven" type="RigidBody2D" parent="Elements"]
+editor/display_folded = true
+position = Vector2( 242.112, 131.719 )
+z_index = 20
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Elements/elementSeven"]
+texture = ExtResource( 19 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Elements/elementSeven"]
+polygon = PoolVector2Array( -26.8729, -31.0066, 26.9298, -31.0066, 30.5587, -26.5888, 30.5587, 27.5295, 26.9298, 31.3162, -27.0307, 31.3162, -30.6597, 27.5295, -30.6597, -26.9043 )
+
+[node name="elementEight" type="RigidBody2D" parent="Elements"]
+position = Vector2( 268.521, 198.341 )
+z_index = 20
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Elements/elementEight"]
+texture = ExtResource( 21 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Elements/elementEight"]
+polygon = PoolVector2Array( -27.0375, -31.0733, 27.1946, -31.0733, 31.307, -26.3184, 31.1785, 27.0142, 26.8091, 31.5121, -27.166, 31.5121, -31.407, 27.2712, -31.1499, -27.732 )
+
+[node name="RecipientOne" parent="." instance=ExtResource( 22 )]
+position = Vector2( 370, 484 )
+script = ExtResource( 23 )
+
+[node name="RecipientTwo" parent="." instance=ExtResource( 24 )]
 position = Vector2( 940, 483 )
-script = ExtResource( 19 )
+script = ExtResource( 25 )
 
 [node name="Pointer" type="Area2D" parent="."]
 editor/display_folded = true
@@ -262,7 +304,7 @@ shape = SubResource( 2 )
 [node name="Shelf" type="Sprite" parent="."]
 editor/display_folded = true
 position = Vector2( 200, 242.809 )
-texture = ExtResource( 20 )
+texture = ExtResource( 26 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -288,17 +330,18 @@ uppercase = true
 anims/Merge = SubResource( 5 )
 anims/NoElementsAnime = SubResource( 6 )
 
-[node name="PauseLayer" parent="." instance=ExtResource( 22 )]
+[node name="PauseLayer" parent="." instance=ExtResource( 28 )]
 
 [node name="BookButton" type="TextureButton" parent="."]
 margin_left = 68.0
 margin_top = 380.0
 margin_right = 132.0
 margin_bottom = 444.0
-texture_normal = ExtResource( 23 )
-texture_hover = ExtResource( 24 )
+texture_normal = ExtResource( 29 )
+texture_hover = ExtResource( 30 )
 
 [node name="Instructions" type="CanvasLayer" parent="."]
+editor/display_folded = true
 layer = 2
 
 [node name="InstructionsInterface" type="Control" parent="Instructions"]
@@ -323,8 +366,8 @@ margin_left = 760.0
 margin_top = 464.0
 margin_right = 1010.0
 margin_bottom = 534.0
-texture_normal = ExtResource( 25 )
-texture_hover = ExtResource( 26 )
+texture_normal = ExtResource( 31 )
+texture_hover = ExtResource( 32 )
 
 [node name="InstructionMessage" type="Label" parent="Instructions/InstructionsInterface"]
 margin_left = 233.956
@@ -332,52 +375,11 @@ margin_top = 213.971
 margin_right = 1017.96
 margin_bottom = 343.971
 custom_fonts/font = SubResource( 7 )
-text = "OK, your second mission is to discover
- the Carbon dioxide composion!"
+text = "OK, your third mission is to discover
+ the iron oxide composion!"
 align = 1
 valign = 1
 uppercase = true
-
-[node name="Dirty" type="Sprite" parent="Instructions/InstructionsInterface"]
-position = Vector2( 387.453, 447.933 )
-scale = Vector2( 0.718976, 0.718976 )
-texture = ExtResource( 27 )
-
-[node name="Control" type="Control" parent="Instructions"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="ColorRect" type="ColorRect" parent="Instructions/Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.00392157, 0.00392157, 0.00392157, 0.901961 )
-
-[node name="ColorRect2" type="ColorRect" parent="Instructions/Control"]
-margin_left = 298.453
-margin_top = 174.852
-margin_right = 963.453
-margin_bottom = 538.852
-color = Color( 0.239216, 0.239216, 0.239216, 1 )
-
-[node name="Label" type="Label" parent="Instructions/Control"]
-margin_left = 311.876
-margin_top = 186.75
-margin_right = 943.876
-margin_bottom = 337.75
-custom_fonts/font = SubResource( 8 )
-text = "Congratulations you have 
-completed this level, now go to the next one!"
-align = 1
-valign = 1
-
-[node name="Go" type="TextureButton" parent="Instructions/Control"]
-margin_left = 510.988
-margin_top = 408.489
-margin_right = 760.989
-margin_bottom = 478.489
-texture_normal = ExtResource( 28 )
-texture_hover = ExtResource( 29 )
 [connection signal="pressed" from="MergeButton" to="." method="_on_MergeButton_pressed"]
 [connection signal="haveElement" from="RecipientOne" to="." method="_on_RecipientOne_haveElement"]
 [connection signal="haveNoElement" from="RecipientOne" to="." method="_on_RecipientOne_haveNoElement"]
@@ -386,4 +388,3 @@ texture_hover = ExtResource( 29 )
 [connection signal="animation_finished" from="Anime" to="." method="_on_Anime_animation_finished"]
 [connection signal="pressed" from="BookButton" to="." method="_on_BookButton_pressed"]
 [connection signal="pressed" from="Instructions/InstructionsInterface/OKButton" to="." method="_on_OKButton_pressed"]
-[connection signal="pressed" from="Instructions/Control/Go" to="." method="_on_Go_pressed"]

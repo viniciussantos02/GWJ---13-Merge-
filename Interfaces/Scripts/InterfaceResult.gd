@@ -8,6 +8,6 @@ func show_result(winner):
 		$WinPanel.visible = true
 	else:
 		$LosePanel.visible = true
-		
+	
 func _on_RestartButton_pressed():
-	return get_tree().reload_current_scene()
+	return get_tree().change_scene("res://Scenes/LevelOne/LevelOne.tscn")

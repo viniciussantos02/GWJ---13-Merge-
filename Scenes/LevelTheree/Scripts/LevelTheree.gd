@@ -9,7 +9,6 @@ var haveElement1 : bool
 var haveElement2 : bool
 
 var winning : bool
-var level : int
 
 var shape = null
 
@@ -77,7 +76,7 @@ func find_colliding_shape(pos):
 			return node
 	return null
 
-func _on_TextureButton_pressed():
+func _on_BookButton_pressed():
 	$Instructions/InstructionsInterface.visible = true
 
 func _on_OKButton_pressed():
@@ -85,25 +84,26 @@ func _on_OKButton_pressed():
 	
 func merge_check():
 	if haveElement1 and haveElement2:
-		if recipientOne.elementOne.is_in_group(game.RIGHTLVONE) && recipientTwo.elementTwo.is_in_group(game.RIGHTLVONE):
+		if recipientOne.elementOne.is_in_group(game.RIGHTLVTHREE) && recipientTwo.elementTwo.is_in_group(game.RIGHTLVTHREE):
 			$Anime.play("Merge")
 			winning = true
 			merging()
-			level = 2
-			$Elements/elementOne.queue_free()
-			$Elements/elementTwo.queue_free()
-			$Elements/elementThree.queue_free()
+			delete_elements()
 			$MergeButton.disabled = true
 			$BookButton.disabled = true
 		else:
 			$Anime.play("Merge")
 			winning = false
 			merging()
-			$Elements/elementOne.queue_free()
-			$Elements/elementTwo.queue_free()
-			$Elements/elementThree.queue_free()
+			delete_elements()
 			$MergeButton.disabled = true
 			$BookButton.disabled = true
 	else:
 		$Anime.play("NoElementsAnime")
 
+func delete_elements():
+	$Elements/elementOne.queue_free()
+	$Elements/elementTwo.queue_free()
+	$Elements/elementThree.queue_free()
+	$Elements/elementFour.queue_free()
+	$Elements/elementFive.queue_free()

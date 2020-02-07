@@ -13,4 +13,4 @@ func _integrate_forces(state):
 		if translate_by:
 			var t = state.get_transform()
 			state.set_transform(Transform2D(t.get_rotation(), t.get_origin() + translate_by))
-			translate_by = null 
+			translate_by = null

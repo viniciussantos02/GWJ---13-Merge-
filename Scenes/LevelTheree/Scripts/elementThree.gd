@@ -4,7 +4,7 @@ var dragging : bool = false
 var translate_by = null
 
 func _ready():
-	add_to_group(game.RIGHTLVONE)
+	add_to_group(game.C2)
 	
 func _integrate_forces(state):
 	if dragging:
@@ -13,4 +13,4 @@ func _integrate_forces(state):
 		if translate_by:
 			var t = state.get_transform()
 			state.set_transform(Transform2D(t.get_rotation(), t.get_origin() + translate_by))
-			translate_by = null 
+			translate_by = null
